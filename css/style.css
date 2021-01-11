@@ -1,0 +1,70 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 990px;
+}
+
+.simple {
+    max-width: 330px;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    width: 100%;
+    font-family: inherit;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.simple input.button {
+    padding: 15px 20px;
+    background-color: #07be51;
+    border-radius: 3px;
+    box-shadow: 0px 2px 2.5px rgba(8,118,52,0.35);
+    border: none;
+}
+
+option:first-child {
+    display: none;
+}
+
+.select {
+    position: relative;
+    display: inline-block;
+}
+
+.select::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    border: 5px solid transparent;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+select {
+    position: relative;
+    padding: 12px 215px 12px 20px;
+    background-color: transparent;
+    -webkit-appearance: none;
+    z-index: 1;
+}
+
+.select option {
+    background-color: red;
+    padding: 20px;
+}
+
+input:focus,
+select:focus {
+    border-radius: 6px solid blue;
+}

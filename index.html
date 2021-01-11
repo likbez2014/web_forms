@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web-forms</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Форми</h1>
+        <h2>01. проста форма</h2>
+        <div class="simple">
+            <form action="php/form_1_php" method="POST">
+                <label>
+                    <input type="text" placeholder="Введіть ім’я">
+                </label>
+                <label>
+                    <input type="text" placeholder="Email">
+                </label>
+                <label class="select">
+                    <select name="form" id="simple">
+                        <option value="" disabled selected>Ваше місто</option>
+                        <option value="">Київ</option>
+                        <option value="">Одеса</option>
+                        <option value="">Хмельницький</option>
+                    </select>
+                </label>
+                <label>
+                    <textarea rows="6" name="form" placeholder="Message"></textarea>
+                </label>
+                <label>
+                    <input class="button" type="submit" value="Зареєструватися">
+                </label>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
