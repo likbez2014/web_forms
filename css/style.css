@@ -60,8 +60,8 @@ select {
 }
 
 .select option {
-    background-color: red;
-    padding: 20px;
+    background-color: blue;
+    height: 40px;
 }
 
 input:focus,
