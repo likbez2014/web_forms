@@ -2,6 +2,23 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+h1 {
+    font-size: 30px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #b3b3b3;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-transform: uppercase;
+}
+
 .wrapper {
     margin: 0 auto;
     max-width: 990px;
@@ -15,18 +32,19 @@ input:not([type="checkbox"]):not([type="radio"]),
 select,
 textarea {
     margin-bottom: 10px;
-    padding: 10px 20px;
+    padding: 12px 20px;
     width: 100%;
     font-family: inherit;
     box-sizing: border-box;
     outline: none;
+    border: 1px solid #ccc;
+
 }
 
-.simple input.button {
-    padding: 15px 20px;
-    background-color: #07be51;
+.button {
+    background-color: #12d661;
     border-radius: 3px;
-    box-shadow: 0px 2px 2.5px rgba(8,118,52,0.35);
+    box-shadow: 0px 2px 2.5px rgba(8, 118, 52, 0.35);
     border: none;
 }
 
@@ -37,6 +55,7 @@ option:first-child {
 .select {
     position: relative;
     display: inline-block;
+    width: 100%;
 }
 
 .select::before {
@@ -53,18 +72,107 @@ option:first-child {
 
 select {
     position: relative;
-    padding: 12px 215px 12px 20px;
     background-color: transparent;
     -webkit-appearance: none;
     z-index: 1;
 }
 
-.select option {
-    background-color: blue;
-    height: 40px;
-}
-
 input:focus,
 select:focus {
-    border-radius: 6px solid blue;
+    border: 1px solid blue !important;
+    box-shadow: 0 0 2.5px rgba(62, 106, 255, 0.55)
+}
+
+.button {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #07be51;
+}
+
+.radio,
+.checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+.radio+label,
+.checkbox+label {
+    position: relative;
+    padding-left: 26px;
+}
+
+.radio+label::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+.radio:checked+label::before {
+    border-color: #3e6aff;
+}
+
+.radio:checked+label::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 4.5px;
+    left: 4.5px;
+    background-color: #3e6aff;
+    border-radius: 50%;
+}
+
+.delivery,
+.payment {
+    margin-bottom: 15px;
+    max-width: 165px;
+    font-family: inherit;
+}
+
+.radioff+label,
+.checkoff+label {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.radioff+label::before,
+.checkbox+label::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    background-color: #f7f7f7;
+    border-radius: 50%;
+}
+
+.checkbox+label::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+
+.paybox {
+    display: flex;
 }

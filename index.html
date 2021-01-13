@@ -39,6 +39,40 @@
                 </label>
             </form>
         </div>
+        <h2>02. елементи</h2>
+        <div class="element">
+            <form action="php/form_1_php" method="POST">
+                <div class="delivery">
+                    <input class="radio" type="radio" id="newpost" name="service">
+                    <label for="newpost">Нова Пошта</label>
+                </div>
+                <div class="delivery">
+                    <input class="radio" type="radio" id="courier" name="service">
+                    <label for="courier">Кур’єр</label>
+                </div>
+                <div class="delivery">
+                    <input class="radio radioff" type="radio" id="self" disabled>
+                    <label for="self">Самовивіз</label>
+                </div>
+                <div class="paybox">
+                    <div class="payment">
+                        <input class="checkbox" type="checkbox" id="condition" name="pay">
+                        <label for="condition">Прочитав умови договору</label>
+                    </div>
+                    <div class="payment">
+                        <input class="checkbox" type="checkbox" id="pdv" name="pay">
+                        <label for="pdv">Згідний з ПДВ 9%</label>
+                    </div>
+                    <div class="payment">
+                        <input class="checkbox checkoff" type="checkbox" id="mail" disabled>
+                        <label for="mail">Отримувати новини на ел. пошту</label>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
     </div>
 </body>
+
 </html>
