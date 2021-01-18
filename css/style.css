@@ -28,7 +28,7 @@ h2 {
     max-width: 330px;
 }
 
-input:not([type="checkbox"]):not([type="radio"]),
+input:not([type="checkbox"]):not([type="radio"]):not([type=date]),
 select,
 textarea {
     margin-bottom: 10px;
@@ -44,8 +44,12 @@ textarea {
 .button {
     background-color: #12d661;
     border-radius: 3px;
-    box-shadow: 0px 2px 2.5px rgba(8, 118, 52, 0.35);
     border: none;
+}
+
+.button:hover {
+    background-color: #07be51;
+    box-shadow: 0px 2px 2.5px rgba(8, 118, 52, 0.35);
 }
 
 option:first-child {
@@ -78,9 +82,12 @@ select {
 }
 
 input:focus,
-select:focus {
+select:focus,
+.date:focus,
+textarea:focus {
     border: 1px solid blue !important;
-    box-shadow: 0 0 2.5px rgba(62, 106, 255, 0.55)
+    box-shadow: 0 0 2.5px rgba(62, 106, 255, 0.55);
+    outline:none;
 }
 
 .button {
@@ -92,9 +99,6 @@ select:focus {
     cursor: pointer;
 }
 
-.button:hover {
-    background-color: #07be51;
-}
 
 .radio,
 .checkbox {
@@ -134,8 +138,14 @@ select:focus {
     border-radius: 50%;
 }
 
-.delivery,
-.payment {
+.element {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.delivery {
     margin-bottom: 15px;
     max-width: 165px;
     font-family: inherit;
@@ -150,7 +160,7 @@ select:focus {
 }
 
 .radioff+label::before,
-.checkbox+label::before {
+.checkoff+label::before {
     content: "";
     position: absolute;
     width: 15px;
@@ -170,9 +180,76 @@ select:focus {
     left: 0;
     border: 1px solid #ccc;
     border-radius: 2px;
+    background-color: #fff;
 }
 
+.checkbox:checked+label::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    border: 1px solid #3d69ff;
+    border-radius: 2px;
+}
+
+.checkbox:checked+label::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 5px;
+    top: 4px;
+    left: 4.3px;
+    border-bottom: 2px solid #244dd7;
+    border-left: 2px solid #244dd7;
+    transform: rotate(-45deg);
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment {
+    margin-bottom: 15px;
+    max-width: 350px;
+    font-family: inherit;
+}
+
+.transport {
+    width: 165px;
+}
 
 .paybox {
-    display: flex;
+    width: 350px;
 }
+
+.elements {
+    display: table;
+    padding: 10px 0;
+    width: 470px;
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+}
+
+.elements-row {
+    display: table-row;
+
+}
+
+.elements-row span {
+    display: table-cell;
+    padding: 10px 20px;
+    /* border: 1px solid #000; */
+}
+
+.date {
+    padding: 10px 15px;
+    width: 150px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
