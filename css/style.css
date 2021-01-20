@@ -87,7 +87,7 @@ select:focus,
 textarea:focus {
     border: 1px solid blue !important;
     box-shadow: 0 0 2.5px rgba(62, 106, 255, 0.55);
-    outline:none;
+    outline: none;
 }
 
 .button {
@@ -99,9 +99,10 @@ textarea:focus {
     cursor: pointer;
 }
 
-
 .radio,
-.checkbox {
+.checkbox,
+.man,
+.woman {
     position: absolute;
     visibility: hidden;
 }
@@ -136,6 +137,14 @@ textarea:focus {
     left: 4.5px;
     background-color: #3e6aff;
     border-radius: 50%;
+}
+
+.wrapper-element {
+    margin: 50px 0;
+    padding: 50px 0;
+    max-width: 990px;
+    border-top: 1px solid #dcdcde;
+    border-bottom: 1px solid #dcdcde;
 }
 
 .element {
@@ -242,14 +251,99 @@ textarea:focus {
 .elements-row span {
     display: table-cell;
     padding: 10px 20px;
-    /* border: 1px solid #000; */
 }
 
 .date {
     padding: 10px 15px;
-    width: 150px;
+    font-size: 14px;
+    color: #1f222c;
     border-radius: 3px;
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
+.elements-head {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 700;
+}
+
+.date::-webkit-inner-spin-button {
+    display: none;
+}
+
+.date::-webkit-datetime-edit-text {
+    width: 50px;
+}
+
+.wrapper-checkbox {
+    border: 1px solid #3d69ff;
+}
+
+.man+label,
+.woman+label {
+    position: relative;
+    padding-left: 50px;
+}
+
+.man+label::before,
+.woman+label::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: -24px;
+    left: -31px;
+    border-radius: 50%;
+    background-color: #e8e8e8;
+    border: 2px solid #e8e8e8;
+}
+
+.man+label::before {
+    background-image: url(../img/man-grey.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.woman+label::before {
+    background-image: url(../img/woman-grey.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.human-checkbox {
+    padding: 35px;
+    max-width: 165px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f222c;
+}
+
+.man:checked+label::after,
+.woman:checked+label::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: -24px;
+    left: -31px;
+    border-radius: 50%;
+    border: 2px solid #3e6aff;
+}
+
+.man:checked+label::after {
+    background-image: url(../img/man-color.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.woman:checked+label::after {
+    background-image: url(../img/woman-color.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.man:checked+label,
+.woman:checked+label {
+    color: #3e6aff;
+}
