@@ -360,6 +360,9 @@ textarea:focus {
 
 .oval-container {
     padding: 12px 0;
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
 }
 
 .oval-checkbox {
