@@ -102,7 +102,8 @@ textarea:focus {
 .radio,
 .checkbox,
 .man,
-.woman {
+.woman,
+.oval-checkbox {
     position: absolute;
     visibility: hidden;
 }
@@ -245,7 +246,6 @@ textarea:focus {
 
 .elements-row {
     display: table-row;
-
 }
 
 .elements-row span {
@@ -276,8 +276,18 @@ textarea:focus {
     width: 50px;
 }
 
-.wrapper-checkbox {
-    border: 1px solid #3d69ff;
+.human {
+    display: flex;
+}
+
+.people {
+    flex: 445px;
+    margin: 0;
+}
+
+.oval {
+    flex: 545px;
+    padding: 10px;
 }
 
 .man+label,
@@ -290,8 +300,8 @@ textarea:focus {
 .woman+label::before {
     content: "";
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 68px;
+    height: 68px;
     top: -24px;
     left: -31px;
     border-radius: 50%;
@@ -312,8 +322,8 @@ textarea:focus {
 }
 
 .human-checkbox {
-    padding: 35px;
-    max-width: 165px;
+    padding: 28px 35px;
+    max-width: 445px;
     font-size: 16px;
     font-weight: 700;
     color: #1f222c;
@@ -323,8 +333,8 @@ textarea:focus {
 .woman:checked+label::after {
     content: "";
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 68px;
+    height: 68px;
     top: -24px;
     left: -31px;
     border-radius: 50%;
@@ -346,4 +356,61 @@ textarea:focus {
 .man:checked+label,
 .woman:checked+label {
     color: #3e6aff;
+}
+
+.oval-container {
+    padding: 12px 0;
+}
+
+.oval-checkbox {
+    padding: 15px;
+}
+
+.oval-checkbox+label {
+    position: relative;
+    padding-left: 60px;
+}
+
+.oval-checkbox+label::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+    background-color: #cfcfd1;
+}
+
+.oval-checkbox+label::after {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 1.5px;
+    left: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.oval-checkbox:checked+label::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+    background-color: #3e6aff;
+}
+
+.oval-checkbox:checked+label::after {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 1.5px;
+    left: 22px;
+    border-radius: 50%;
+    background-color: #fff;
 }

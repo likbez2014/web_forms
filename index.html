@@ -99,14 +99,30 @@
         </div>
         <div class="wrapper-checkbox">
             <h2>03. стилізовані чекбокси </h2>
-            <form action="php/form_1_php" method="POST">
-                <div class="human-checkbox">
-                    <input class="man" type="checkbox" id="man">
-                    <label for="man">Чоловік</label>
+            <form class="human" action="php/form_1_php" method="POST">
+                <div class="people">
+                    <div class="human-checkbox">
+                        <input class="man" type="checkbox" id="man">
+                        <label for="man">Чоловік</label>
+                    </div>
+                    <div class="human-checkbox">
+                        <input class="woman" type="checkbox" id="woman">
+                        <label for="woman">Жінка</label>
+                    </div>
                 </div>
-                <div class="human-checkbox">
-                    <input class="woman" type="checkbox" id="woman">
-                    <label for="woman">Жінка</label>
+                <div class="oval">
+                    <div class="oval-container">
+                        <input class="oval-checkbox" type="checkbox" id="oval-first">
+                        <label for="oval-first">Отримувати новини</label>
+                    </div>
+                    <div class="oval-container">
+                        <input class="oval-checkbox" type="checkbox" id="oval-second">
+                        <label for="oval-second">Купити додому ковбаси</label>
+                    </div>
+                    <div class="oval-container">
+                        <input class="oval-checkbox" type="checkbox" id="oval-third">
+                        <label for="oval-third">Включити світло</label>
+                    </div>
                 </div>
             </form>
         </div>
